@@ -9,10 +9,10 @@ const config = require('../config/config').getInstance()
 const html = require('../utils/fetchHtml')
 
 class MovieScraper {
-  constructor () {
+  constructor (custom_url) {
     try {
-      this.url = config.url
-      this.movieId = this.url.split('/').pop()
+      this.url = custom_url || config.url
+      this.movieId = parseInt(this.url.split('/').pop())
       this.ratingValue = undefined
       this.title = undefined
       this.releaseDate = undefined
@@ -93,10 +93,10 @@ class MovieScraper {
     try {
       // fetch full reviews articles
       for (const review of this.reviews) {
-          const reviewPage = await html.fetch(review.url)
-          const $ = cheerio.load(reviewPage)
+        const reviewPage = await html.fetch(review.url)
+        const $ = cheerio.load(reviewPage)
 
-          review.article = $('.rvi-review-content').text().trim()
+        review.article = $('.rvi-review-content').text().trim()
       }
     } catch (error) {
       logger.error(`MovieScraper: ${error}`)

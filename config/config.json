@@ -2,19 +2,19 @@
     "development": {
         "url": "https://www.senscritique.com/film/Fight_Club/363185",
         "database": {
-            "connectionString": "postgresql://dbuser:secretpassword@database.server.com:3211/dev"
+            "connectionString": "postgresql://dbuser:secretpassword@db:5432/dev"
         }
     },
     "testing": {
         "url": "https://www.senscritique.com/film/Fight_Club/363185",
         "database": {
-            "connectionString": "postgresql://dbuser:secretpassword@database.server.com:3211/test"
+            "connectionString": "postgresql://dbuser:secretpassword@db:5432/test"
         }
     },
     "production": {
         "url": "https://www.senscritique.com/film/Fight_Club/363185",
         "database": {
-            "connectionString": "postgresql://dbuser:secretpassword@database.server.com:3211/prod"
+            "connectionString": "postgresql://dbuser:secretpassword@db:5432/prod"
         }
     }
 }
