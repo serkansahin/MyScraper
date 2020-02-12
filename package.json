@@ -1,0 +1,29 @@
+{
+  "name": "scraper",
+  "version": "0.0.1",
+  "description": "A simple scraping app",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "standard && node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serkansahin/MyScraper.git"
+  },
+  "author": "Serkan Sahin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serkansahin/MyScraper/issues"
+  },
+  "homepage": "https://github.com/serkansahin/MyScraper#readme",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "sequelize": "^5.21.4",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
